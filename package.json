@@ -1,0 +1,11 @@
+{
+  "name": "unnatural-order-uk",
+  "version": "1.0.0",
+  "description": "Official avant-garde website for UNNATURAL ORDER — Kent, UK Metalcore. TRANSMISSION // UO-001 // OBSERVE//INFILTRATE.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

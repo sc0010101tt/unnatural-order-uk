@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNNATURAL ORDER — OBSERVE//INFILTRATE</title>
+  <meta name="description" content="UNNATURAL ORDER — Modern metalcore from Canterbury, Kent. M2TM Winners 2025. Bloodstock Open Air. OBSERVE//INFILTRATE EP out now." />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- Inline Precision Brand Marks -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Exact 4-Bar Diagonally Sliced U/O Monolith -->
+      <symbol id="uo-monogram" viewBox="0 0 200 360">
+        <polygon points="22,68 40,48 40,312 22,292" fill="currentColor" />
+        <polygon points="160,48 178,68 178,292 160,312" fill="currentColor" />
+        <polygon points="62,24 82,10 82,224 62,240" fill="currentColor" />
+        <polygon points="118,10 138,24 138,178 118,194" fill="currentColor" />
+        <path d="M62,260 L82,244 L82,304 Q82,326 100,326 Q118,326 118,304 L118,214 L138,198 L138,306 Q138,348 100,348 Q62,348 62,306 Z" fill="currentColor" />
+      </symbol>
+
+      <!-- Subpixel-Centered Custom UNNATURAL ORDER Wordmark -->
+      <symbol id="uo-wordmark" viewBox="0 0 690 116">
+        <g fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="butt" stroke-linejoin="miter">
+          <path d="M16,14 L16,49 C16,58 23,62 32,62 L52,62 C61,62 68,58 68,49 L68,14" />
+          <path d="M92,62 L92,16 L142,60 L142,14" />
+          <path d="M166,62 L166,16 L216,60 L216,14" />
+          <path d="M238,62 L267,16 L296,62" />
+          <path d="M312,16 L368,16 M340,16 L340,62" />
+          <path d="M388,14 L388,49 C388,58 395,62 404,62 L424,62 C433,62 440,58 440,49 L440,14" />
+          <path d="M464,62 L464,16 L504,16 C514,16 518,21 518,28 C518,35 514,40 504,40 L470,40 M495,40 L519,62" />
+          <path d="M539,62 L568,16 L597,62" />
+          <path d="M621,14 L621,62 L674,62" />
+        </g>
+        <g transform="translate(-6.5, 0)" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter">
+          <rect x="176" y="84" width="22" height="19" rx="4" />
+          <path d="M258,103 L258,84 L274,84 C278,84 280,86 280,89 C280,92 278,94 274,94 L258,94 M271,94 L281,103" />
+          <path d="M340,103 L340,84 L354,84 C360,84 363,87 363,93.5 C363,100 360,103 354,103 Z" />
+          <path d="M423,84 L444,84 M423,93.5 L441,93.5 M423,103 L444,103" />
+          <path d="M504,103 L504,84 L520,84 C524,84 526,86 526,89 C526,92 524,94 520,94 L504,94 M517,94 L527,103" />
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Subtle fixed vertical publication spine -->
+  <aside class="spine-left mono" aria-hidden="true">
+    <span>UNNATURAL ORDER</span>
+    <span class="spine-rule"></span>
+    <span>KENT, UK</span>
+  </aside>
+  <aside class="spine-right mono" aria-hidden="true">
+    <span id="spineAct">00 / MONOLITH</span>
+    <span class="spine-rule"></span>
+    <span id="spineProgress">00%</span>
+  </aside>
+
+  <!-- Minimal Architectural Top Bar -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand-lockup" aria-label="Unnatural Order Home">
+      <svg class="brand-mark" width="16" height="29"><use href="#uo-monogram" /></svg>
+      <span class="brand-name">UNNATURAL ORDER</span>
+    </a>
+
+    <nav class="site-nav mono" aria-label="Primary">
+      <a href="#release"><span>01</span>OBSERVE//INFILTRATE</a>
+      <a href="#live"><span>02</span>LIVE</a>
+      <a href="#fracture"><span>03</span>OVERTHROW</a>
+      <a href="#origin"><span>04</span>BAND</a>
+      <a href="#merch"><span>05</span>MERCH</a>
+    </nav>
+
+    <div class="header-right mono">
+      <a href="https://open.spotify.com/artist/1yxBIjHORifHhes6WG1LVs" target="_blank" rel="noopener" class="nav-ext">SPOTIFY ↗</a>
+      <a href="https://unnaturalorder.ourmerch.shop" target="_blank" rel="noopener" class="nav-store">STORE</a>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Sheet -->
+  <div class="mobile-sheet" id="mobileSheet" aria-hidden="true">
+    <nav class="mobile-sheet-nav">
+      <a href="#release">01 — OBSERVE//INFILTRATE</a>
+      <a href="#live">02 — LIVE</a>
+      <a href="#fracture">03 — OVERTHROW</a>
+      <a href="#origin">04 — BAND</a>
+      <a href="#merch">05 — MERCH</a>
+      <a href="#newsletter">06 — NEWSLETTER</a>
+    </nav>
+    <div class="mobile-sheet-links mono">
+      <a href="https://www.instagram.com/unnatural_order_uk/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://open.spotify.com/artist/1yxBIjHORifHhes6WG1LVs" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://youtube.com/@unnaturalorder" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://unnaturalorder.ourmerch.shop" target="_blank" rel="noopener">Merch</a>
+      <a href="https://linktr.ee/unnaturalorder" target="_blank" rel="noopener">Linktree</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- ================================================================
+         ACT I — THE FLUTED-GLASS OPTICAL CHAMBER (WEBGL GLSL HERO)
+         ================================================================ -->
+    <section class="hero" id="heroSection" data-act="00 / MONOLITH" aria-label="Unnatural Order">
+      <canvas id="apertureCanvas" class="aperture-canvas"></canvas>
+
+      <div class="hero-frame">
+        <div class="hero-top mono">
+          <span>TRANSMISSION UO-001</span>
+          <span>51.2802° N, 1.0789° E — CANTERBURY</span>
+        </div>
+
+        <div class="hero-stage" id="heroStage">
+          <p class="hero-serif">SYSTEM OVERRIDE</p>
+          <h1 class="sr-only">UNNATURAL ORDER — Kent, UK Metalcore — OBSERVE//INFILTRATE</h1>
+          <div class="wordmark-plate" id="wordmarkPlate">
+            <svg class="wordmark-svg" viewBox="0 0 690 116" aria-hidden="true">
+              <use href="#uo-wordmark" />
+            </svg>
+          </div>
+          <div class="hero-subline mono">
+            <span>OBSERVE//INFILTRATE</span>
+            <span class="sep">/</span>
+            <span>EP OUT NOW</span>
+            <span class="sep">/</span>
+            <span>M2TM WINNERS 2025</span>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <!-- Tactile Hold-to-Fracture Interaction (shears the WebGL monolith along its 38° cut) -->
+          <button type="button" class="fracture-hold mono" id="fractureHoldBtn">
+            <span class="hold-ring" aria-hidden="true">
+              <svg viewBox="0 0 36 36">
+                <circle class="ring-track" cx="18" cy="18" r="15" />
+                <circle class="ring-progress" id="holdRingProgress" cx="18" cy="18" r="15" />
+              </svg>
+            </span>
+            <span class="hold-copy">HOLD TO FRACTURE</span>
+          </button>
+
+          <div class="hero-ffo mono muted">
+            F.F.O GRAPHIC NATURE · MOTIONLESS IN WHITE · WAGE WAR · BORN OF OSIRIS
+          </div>
+
+          <div class="hero-actions mono">
+            <a href="https://open.spotify.com/artist/1yxBIjHORifHhes6WG1LVs" target="_blank" rel="noopener" class="wipe-btn wipe-solid">
+              <span>LISTEN ON SPOTIFY</span>
+            </a>
+            <a href="#release" class="wipe-btn wipe-outline">
+              <span>EXPLORE ↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ACT II — OBSERVE // INFILTRATE (3D GATEFOLD & TRACK SPECIMEN)
+         ================================================================ -->
+    <section class="section section-release" id="release" data-act="01 / RELEASE">
+      <div class="wrap">
+        <div class="act-header reveal">
+          <span class="act-num" aria-hidden="true">01</span>
+          <div class="act-meta">
+            <span class="mono muted">EP RELEASE · OCT 2026</span>
+            <h2 class="monument-title">OBSERVE<span class="crimson">//</span>INFILTRATE</h2>
+          </div>
+        </div>
+
+        <div class="gatefold-layout">
+          <!-- Left: Tactile 3D Specular-Lit Concrete Vinyl Jacket with Sliding Inner Sleeve -->
+          <div class="gatefold-col reveal">
+            <div class="jacket-stage" id="jacketStage">
+              <!-- Sliding Matte-Black Inner Sleeve (slides right on hover) -->
+              <div class="inner-sleeve" aria-hidden="true">
+                <div class="inner-sleeve-top mono">
+                  <span>SIDE A</span>
+                  <span>UO-001</span>
+                </div>
+                <div class="inner-sleeve-groove"></div>
+                <div class="inner-sleeve-bottom mono">
+                  <span>OBSERVE//INFILTRATE</span>
+                  <span>KENT, UK</span>
+                </div>
+              </div>
+
+              <!-- Outer Concrete Embossed Gatefold Jacket -->
+              <div class="outer-jacket" id="outerJacket">
+                <div class="jacket-specular" id="jacketSpecular" aria-hidden="true"></div>
+                <div class="jacket-wires" aria-hidden="true"></div>
+                <div class="jacket-spine-crease" aria-hidden="true"></div>
+                <svg class="jacket-emblem" viewBox="0 0 200 360" aria-label="OBSERVE//INFILTRATE Cover Emblem">
+                  <use href="#uo-monogram" />
+                </svg>
+                <div class="jacket-footer mono">
+                  <span>TRANSMISSION: UO-OI</span>
+                  <span>OBSERVE//INFILTRATE</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gatefold-caption">
+              <p>
+                Super-low guitar tunings, pitch-automated riffs, industrial synth textures, and raw percussive sound design — including sampling a metal keg with an axe.
+              </p>
+              <div class="inline-links mono">
+                <a href="https://open.spotify.com/artist/1yxBIjHORifHhes6WG1LVs" target="_blank" rel="noopener">SPOTIFY ↗</a>
+                <a href="https://youtube.com/@unnaturalorder" target="_blank" rel="noopener">YOUTUBE ↗</a>
+                <a href="https://linktr.ee/unnaturalorder" target="_blank" rel="noopener">ALL PLATFORMS ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Typographic Track Specimen + Official Spotify Embed -->
+          <div class="specimen-col reveal">
+            <!-- Dynamic Track Specimen Header -->
+            <div class="track-specimen" id="trackSpecimen">
+              <div class="specimen-top mono">
+                <span id="specIndex">TRACK 01</span>
+                <span class="muted" id="specFormat">EP TITLE TRACK · 2026</span>
+              </div>
+              <div class="specimen-title" id="specTitle">OBSERVE//INFILTRATE</div>
+              <p class="specimen-note" id="specNote">
+                Low-tuned opening assault built around pitch-automated breakdowns and raw metal-keg percussion.
+              </p>
+            </div>
+
+            <!-- Interactive Track Index -->
+            <ol class="specimen-list" id="specimenList">
+              <li class="is-active" data-idx="TRACK 01" data-format="EP TITLE TRACK · 2026" data-title="OBSERVE//INFILTRATE" data-note="Low-tuned opening assault built around pitch-automated breakdowns and raw metal-keg percussion.">
+                <button type="button" class="spec-row">
+                  <span class="mono muted">01</span>
+                  <span class="spec-name">OBSERVE//INFILTRATE</span>
+                  <span class="mono muted">EP</span>
+                </button>
+              </li>
+              <li data-idx="TRACK 02" data-format="SINGLE & OFFICIAL VIDEO · 2026" data-title="VOID" data-note="Dark atmospheric electronics colliding with drop-tuned djent riffs and stark monochrome visuals.">
+                <button type="button" class="spec-row">
+                  <span class="mono muted">02</span>
+                  <span class="spec-name">VOID</span>
+                  <span class="mono muted">VIDEO</span>
+                </button>
+              </li>
+              <li data-idx="TRACK 03" data-format="SINGLE" data-title="VISCERAL" data-note="Relentless groove-driven metalcore anchored by sharp vocal contrasts and live-room grit.">
+                <button type="button" class="spec-row">
+                  <span class="mono muted">03</span>
+                  <span class="spec-name">VISCERAL</span>
+                  <span class="mono muted">SINGLE</span>
+                </button>
+              </li>
+              <li data-idx="TRACK 04" data-format="SINGLE" data-title="BLOODSPORT" data-note="Heavy melodic tension and percussive industrial weight built for the live pit.">
+                <button type="button" class="spec-row">
+                  <span class="mono muted">04</span>
+                  <span class="spec-name">BLOODSPORT</span>
+                  <span class="mono muted">SINGLE</span>
+                </button>
+              </li>
+              <li data-idx="ARCHIVE" data-format="EARLIER RELEASES" data-title="GUNPOINT / LIFELESS / POLTERGEIST" data-note="Earlier independent UK underground releases paving the road to Kent M2TM 2025 &amp; Bloodstock Open Air.">
+                <button type="button" class="spec-row">
+                  <span class="mono muted">05</span>
+                  <span class="spec-name">GUNPOINT · LIFELESS · POLTERGEIST</span>
+                  <span class="mono muted">ARCHIVE</span>
+                </button>
+              </li>
+            </ol>
+
+            <!-- Official Spotify Stream -->
+            <div class="spotify-frame">
+              <iframe
+                src="https://open.spotify.com/embed/artist/1yxBIjHORifHhes6WG1LVs?utm_source=generator&theme=0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Stream Unnatural Order on Spotify"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ACT III — LIVE (SCREENPRINT POSTER LEDGER + BLOODSTOCK CINEMA)
+         ================================================================ -->
+    <section class="section section-live" id="live" data-act="02 / LIVE">
+      <div class="wrap">
+        <div class="act-header reveal">
+          <span class="act-num" aria-hidden="true">02</span>
+          <div class="act-meta">
+            <span class="mono muted">UO — L1V3 50UND · NO STUDIO MAGIC</span>
+            <h2 class="monument-title">LIVE DATES</h2>
+          </div>
+        </div>
+
+        <!-- Screenprint Poster Ledger with Left-to-Right Invert Wipe -->
+        <div class="poster-ledger reveal">
+          <a href="https://good-show.co.uk/e/atravion-unnatural-order-gas-acid-at-speedway-2tnyhx" target="_blank" rel="noopener" class="poster-row is-upcoming">
+            <div class="poster-date">
+              <span class="big-date">19.12</span>
+              <span class="mono year-tag"><i class="live-dot"></i>2026</span>
+            </div>
+            <div class="poster-info">
+              <h3>SPEEDWAY MUSIC VENUE</h3>
+              <span class="mono muted">WITH ATRAVION &amp; GAS ACID</span>
+            </div>
+            <div class="poster-loc mono">UK</div>
+            <div class="poster-cta mono">TICKETS ↗</div>
+          </a>
+
+          <div class="poster-row">
+            <div class="poster-date">
+              <span class="big-date">12.09</span>
+              <span class="mono year-tag muted">2026</span>
+            </div>
+            <div class="poster-info">
+              <h3>LONDON METALFEST — THE UNDERWORLD</h3>
+              <span class="mono muted">CAMDEN UNDERWORLD STAGE</span>
+            </div>
+            <div class="poster-loc mono muted">LONDON</div>
+            <div class="poster-cta mono muted">ARCHIVE</div>
+          </div>
+
+          <div class="poster-row">
+            <div class="poster-date">
+              <span class="big-date">05.06</span>
+              <span class="mono year-tag muted">2026</span>
+            </div>
+            <div class="poster-info">
+              <h3>UK &amp; IRELAND UNDERGROUND</h3>
+              <span class="mono muted">W/ SLEEP BROKEN · NEW CROSS INN · THE BRUNSWICK · DUBLIN</span>
+            </div>
+            <div class="poster-loc mono muted">UK / IE</div>
+            <div class="poster-cta mono muted">ARCHIVE</div>
+          </div>
+
+          <a href="https://youtu.be/mM2zMWnpFmo" target="_blank" rel="noopener" class="poster-row">
+            <div class="poster-date">
+              <span class="big-date">08.25</span>
+              <span class="mono year-tag">M2TM</span>
+            </div>
+            <div class="poster-info">
+              <h3>BLOODSTOCK OPEN AIR</h3>
+              <span class="mono muted">TIMOTHY TAYLOR NEW BLOOD STAGE · KENT M2TM WINNERS</span>
+            </div>
+            <div class="poster-loc mono">CATTON PARK</div>
+            <div class="poster-cta mono">WATCH SET ↗</div>
+          </a>
+        </div>
+
+        <!-- Monolithic Bloodstock Cinema Frame (unfolds real YouTube footage on click) -->
+        <div class="cinema-block reveal" id="bloodstockCinema">
+          <div class="cinema-cover" id="cinemaCover">
+            <div class="cinema-slits" aria-hidden="true"></div>
+            <div class="cinema-top mono">
+              <span>LIVE FILM // BLOODSTOCK OPEN AIR</span>
+              <span>TIMOTHY TAYLOR NEW BLOOD STAGE</span>
+            </div>
+            <div class="cinema-center">
+              <p class="cinema-serif">NO STUDIO MAGIC</p>
+              <button type="button" class="cinema-play mono" id="cinemaPlayBtn">
+                <span class="play-triangle" aria-hidden="true"></span>
+                <span>PLAY LIVE FOOTAGE — YOUTUBE</span>
+              </button>
+            </div>
+            <div class="cinema-foot mono muted">
+              <span>KENT M2TM WINNERS 2025</span>
+              <span>JUST OUR LIVE DESK AUDIO</span>
+            </div>
+          </div>
+          <div class="cinema-player" id="cinemaPlayer" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ACT IV — THE FRACTURE (SCROLL-PINNED VENETIAN-BLIND MANIFESTO)
+         Scroll progress widens the blind slits & physically cleaves "OVERTHROW"
+         ================================================================ -->
+    <section class="fracture-chamber" id="fracture" data-act="03 / OVERTHROW" aria-label="We will grow and we will overthrow">
+      <div class="fracture-sticky">
+        <div class="fracture-blinds" id="fractureBlinds" aria-hidden="true"></div>
+        <div class="fracture-seam" id="fractureSeam" aria-hidden="true"></div>
+
+        <div class="fracture-stage wrap">
+          <p class="fracture-eyebrow mono muted">CANTERBURY // MANIFESTO</p>
+          <div class="fracture-lines">
+            <span class="f-line" id="fLine1">WE WILL GROW</span>
+            <span class="f-line" id="fLine2">AND WE WILL</span>
+            <!-- Physically cleaved dual-layer word -->
+            <span class="f-cleave" id="fCleave" aria-label="OVERTHROW">
+              <span class="f-cleave-top" id="fCleaveTop" aria-hidden="true">OVERTHROW</span>
+              <span class="f-cleave-bot" id="fCleaveBot" aria-hidden="true">OVERTHROW</span>
+              <span class="sr-only">OVERTHROW</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ACT V — ORIGIN & LINEUP (THE INVERTED "NATURAL ORDER" ARTIFACT)
+         ================================================================ -->
+    <section class="section section-origin" id="origin" data-act="04 / BAND">
+      <div class="wrap">
+        <div class="origin-grid">
+          <!-- Left Sticky Typographic Origin Artifact -->
+          <div class="origin-sticky reveal">
+            <span class="mono muted">04 — ORIGIN · SEPT 2023</span>
+
+            <div class="inversion-artifact" aria-label="Natural Order inverted into Unnatural Order">
+              <div class="inv-struck">NATURAL</div>
+              <div class="inv-prefix">UN<span class="inv-base">NATURAL</span></div>
+              <div class="inv-order">ORDER</div>
+            </div>
+
+            <p class="origin-copy">
+              Spotted as “natural order” on a building in Canterbury and inverted to mirror chaos and a world out of balance. Four musicians fusing modern metalcore, lower-tuned djent, and stark industrial textures.
+            </p>
+
+            <div class="origin-coords mono muted">
+              <span>CANTERBURY, KENT</span>
+              <span>·</span>
+              <span>BLOODSTOCK NEW BLOOD STAGE</span>
+              <span>·</span>
+              <span>SUPPORT FOR THE RAVEN AGE</span>
+            </div>
+          </div>
+
+          <!-- Right: Full-Bleed Hairline Personnel & Credits Index -->
+          <div class="personnel-col reveal">
+            <div class="ledger-kicker mono muted">THE FOUR-PIECE</div>
+            <ul class="personnel-list">
+              <li class="person-row">
+                <div class="person-main">
+                  <span class="mono muted">01</span>
+                  <h3>ALEX FULLER</h3>
+                  <span class="mono person-role">VOCALS</span>
+                </div>
+                <div class="person-sub mono muted">@PRINCEALEXANDERUO · FRONTMAN</div>
+              </li>
+              <li class="person-row">
+                <div class="person-main">
+                  <span class="mono muted">02</span>
+                  <h3>NATHAN RED</h3>
+                  <span class="mono person-role">GUITARS / PRODUCTION</span>
+                </div>
+                <div class="person-sub mono muted">LOW-TUNED GUITARS · SOUND DESIGN · MIX</div>
+              </li>
+              <li class="person-row">
+                <div class="person-main">
+                  <span class="mono muted">03</span>
+                  <h3>HENRY VINSON</h3>
+                  <span class="mono person-role">BASS</span>
+                </div>
+                <div class="person-sub mono muted">SUB-OCTAVE LOW END · JOINED OCT 2026</div>
+              </li>
+              <li class="person-row">
+                <div class="person-main">
+                  <span class="mono muted">04</span>
+                  <h3>JACOBI MARMAN</h3>
+                  <span class="mono person-role">DRUMS</span>
+                </div>
+                <div class="person-sub mono muted">PERCUSSION · LIVE RHYTHM ENGINE</div>
+              </li>
+            </ul>
+
+            <div class="ledger-kicker mono muted credits-kicker">COLLABORATORS &amp; CONTACTS</div>
+            <ul class="credits-mini mono">
+              <li>
+                <span class="muted">PHOTOGRAPHY</span>
+                <span>@X.XVERONICA.XX</span>
+              </li>
+              <li>
+                <span class="muted">CUSTOM PICKS &amp; TIN</span>
+                <span>@THEPICKSHOUSE</span>
+              </li>
+              <li>
+                <span class="muted">BOOKINGS / LINKS</span>
+                <a href="https://linktr.ee/unnaturalorder" target="_blank" rel="noopener">LINKTR.EE/UNNATURALORDER ↗</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ACT VI — UO-MERCH (INTERACTIVE PRINTMAKING BLUEPRINT STUDIO)
+         ================================================================ -->
+    <section class="section section-merch" id="merch" data-act="05 / MERCH">
+      <div class="wrap">
+        <div class="act-header reveal">
+          <span class="act-num" aria-hidden="true">05</span>
+          <div class="act-meta">
+            <span class="mono muted">TRANSMISSION UO-MERCH</span>
+            <h2 class="monument-title">STORE &amp; HARDWARE</h2>
+          </div>
+        </div>
+
+        <div class="merch-studio">
+          <!-- Left: Homage to their Nov 12 Brutalist UI-as-Art Merch Graphic -->
+          <a href="https://unnaturalorder.ourmerch.shop" target="_blank" rel="noopener" class="merch-poster reveal">
+            <div class="merch-poster-slits" aria-hidden="true"></div>
+            <div class="merch-poster-top">
+              <svg class="mp-wordmark" viewBox="0 0 690 116"><use href="#uo-wordmark" /></svg>
+              <span class="mono muted">OFFICIAL STORE</span>
+            </div>
+            <div class="merch-poster-mid">
+              <svg class="mp-emblem" viewBox="0 0 200 360"><use href="#uo-monogram" /></svg>
+              <span class="mp-shop-btn mono">SHOP NOW ↗</span>
+            </div>
+            <div class="merch-poster-bot mono muted">
+              <span>UNNATURALORDER.OURMERCH.SHOP</span>
+              <span>DIRECT BAND SUPPORT</span>
+            </div>
+          </a>
+
+          <!-- Right: Interactive Printmaking Blueprint Switcher (FRONT / BACK / TIN) -->
+          <div class="blueprint-studio reveal">
+            <div class="blueprint-tabs mono" role="tablist" aria-label="Merch Blueprint Views">
+              <button type="button" class="bp-tab is-active" data-bp="front" role="tab" aria-selected="true">01 / TEE FRONT</button>
+              <button type="button" class="bp-tab" data-bp="back" role="tab" aria-selected="false">02 / TEE BACK</button>
+              <button type="button" class="bp-tab" data-bp="tin" role="tab" aria-selected="false">03 / PICK TIN</button>
+            </div>
+
+            <div class="blueprint-canvas">
+              <!-- Panel 1: Heavyweight Tee Front Schematic -->
+              <div class="bp-panel is-active" data-bp-panel="front">
+                <svg class="bp-svg" viewBox="0 0 420 380" aria-label="Heavyweight Tee Front Print Schematic">
+                  <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.88">
+                    <!-- Oversized drop-shoulder silhouette -->
+                    <path d="M155,44 L74,82 L98,154 L132,138 L132,340 L288,340 L288,138 L322,154 L346,82 L265,44 C248,66 172,66 155,44 Z" />
+                    <!-- Collar rib detail -->
+                    <path d="M161,47 C178,64 242,64 259,47" stroke-opacity="0.45" />
+                    <!-- Subtle registration crop marks -->
+                    <path d="M40,40 L54,40 M40,40 L40,54 M380,40 L366,40 M380,40 L380,54 M40,344 L54,344 M40,344 L40,330 M380,344 L366,344 M380,344 L380,330" stroke-opacity="0.35" />
+                  </g>
+                  <!-- Chest wordmark print -->
+                  <use href="#uo-wordmark" x="150" y="108" width="120" height="22" color="#ECECE8" />
+                  <text x="210" y="362" text-anchor="middle" fill="#68686D" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="3">FIG 01 — HEAVYWEIGHT COTTON / FRONT PRINT</text>
+                </svg>
+              </div>
+
+              <!-- Panel 2: Heavyweight Tee Back Monolith Print Schematic -->
+              <div class="bp-panel" data-bp-panel="back">
+                <svg class="bp-svg" viewBox="0 0 420 380" aria-label="Heavyweight Tee Back Monolith Schematic">
+                  <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.88">
+                    <path d="M155,44 L74,82 L98,154 L132,138 L132,340 L288,340 L288,138 L322,154 L346,82 L265,44 C242,56 178,56 155,44 Z" />
+                    <path d="M40,40 L54,40 M40,40 L40,54 M380,40 L366,40 M380,40 L380,54 M40,344 L54,344 M40,344 L40,330 M380,344 L366,344 M380,344 L380,330" stroke-opacity="0.35" />
+                  </g>
+                  <!-- Oversized back U/O monolith print -->
+                  <use href="#uo-monogram" x="164" y="88" width="92" height="166" color="#ECECE8" />
+                  <text x="210" y="282" text-anchor="middle" fill="#D81920" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="4">OBSERVE//INFILTRATE</text>
+                  <text x="210" y="362" text-anchor="middle" fill="#68686D" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="3">FIG 02 — BACK MONOLITH SCREENPRINT</text>
+                </svg>
+              </div>
+
+              <!-- Panel 3: Brushed Steel Pick Tin & Custom Picks Schematic -->
+              <div class="bp-panel" data-bp-panel="tin">
+                <svg class="bp-svg" viewBox="0 0 420 380" aria-label="Brushed Silver Pick Tin and Custom Picks Schematic">
+                  <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.9">
+                    <!-- Hinged steel pocket tin -->
+                    <rect x="64" y="96" width="212" height="136" rx="18" />
+                    <rect x="74" y="106" width="192" height="116" rx="12" stroke-opacity="0.35" />
+                    <!-- Dimension guide lines -->
+                    <path d="M64,74 L276,74 M64,68 L64,80 M276,68 L276,80" stroke-opacity="0.35" />
+                    <!-- Custom picks -->
+                    <path d="M326,154 C354,154 366,178 354,206 C342,232 332,242 326,242 C320,242 310,232 298,206 C286,178 298,154 326,154 Z" />
+                    <path d="M294,234 C316,234 326,252 316,274 C306,294 298,302 294,302 C290,302 282,294 272,274 C262,252 272,234 294,234 Z" stroke-opacity="0.65" />
+                  </g>
+                  <!-- Embossed rotated U/O on tin lid -->
+                  <g transform="translate(170, 164) rotate(-90) translate(-34, -61)">
+                    <use href="#uo-monogram" width="68" height="122" color="#ECECE8" />
+                  </g>
+                  <!-- Miniature U/O on pick -->
+                  <use href="#uo-monogram" x="315" y="176" width="22" height="40" color="#ECECE8" />
+                  <text x="170" y="64" text-anchor="middle" fill="#68686D" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="3">BRUSHED STEEL TIN</text>
+                  <text x="210" y="362" text-anchor="middle" fill="#68686D" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="3">FIG 03 — CRAFTED WITH @THEPICKSHOUSE</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="blueprint-foot">
+              <p class="blueprint-desc" id="blueprintDesc">
+                Oversized heavyweight black tees &amp; hoodies printed with the UNNATURAL ORDER wordmark and OBSERVE//INFILTRATE monolith.
+              </p>
+              <a href="https://unnaturalorder.ourmerch.shop" target="_blank" rel="noopener" class="wipe-btn wipe-solid">
+                <span>OPEN OURMERCH STORE ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================================
+       ACT VII — "WE WILL OVERTHROW" ELASTIC-COMB BARCODE FOOTER
+       ================================================================ -->
+  <footer class="site-footer" id="newsletter" data-act="06 / END">
+    <div class="wrap">
+      <div class="overthrow-block reveal">
+        <p class="overthrow-title mono">WE WILL OVERTHROW</p>
+
+        <!-- Interactive Elastic Optical-Comb SVG Barcode -->
+        <div class="barcode-stage" id="barcodeStage">
+          <svg id="barcodeSvg" class="barcode-svg" viewBox="0 0 1200 76" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <p class="barcode-sub mono">S U B S C R I B E &nbsp;&nbsp; T O &nbsp;&nbsp; O U R &nbsp;&nbsp; N E W S L E T T E R</p>
+        </div>
+
+        <form class="subscribe-bar" id="newsletterForm">
+          <label for="emailInput" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="emailInput"
+            class="subscribe-input mono"
+            placeholder="ENTER EMAIL ADDRESS"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="subscribe-btn mono">SUBSCRIBE</button>
+        </form>
+        <p class="subscribe-feedback mono" id="newsletterFeedback" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-id">
+          <svg width="20" height="36"><use href="#uo-monogram" /></svg>
+          <div>
+            <div class="footer-word">UNNATURAL ORDER</div>
+            <div class="mono muted">KENT, ENGLAND</div>
+          </div>
+        </div>
+
+        <nav class="footer-links mono" aria-label="Social Links">
+          <a href="https://www.instagram.com/unnatural_order_uk/" target="_blank" rel="noopener">INSTAGRAM</a>
+          <a href="https://open.spotify.com/artist/1yxBIjHORifHhes6WG1LVs" target="_blank" rel="noopener">SPOTIFY</a>
+          <a href="https://youtube.com/@unnaturalorder" target="_blank" rel="noopener">YOUTUBE</a>
+          <a href="https://unnaturalorder.ourmerch.shop" target="_blank" rel="noopener">MERCH</a>
+          <a href="https://linktr.ee/unnaturalorder" target="_blank" rel="noopener">LINKTREE</a>
+          <a href="https://www.threads.com/@unnatural_order_uk" target="_blank" rel="noopener">THREADS</a>
+        </nav>
+      </div>
+
+      <div class="footer-end mono">
+        <span class="crimson terminated">TRANSMISSION TERMINATED</span>
+        <span class="muted">© 2026 UNNATURAL ORDER UK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
