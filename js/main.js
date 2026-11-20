@@ -44,16 +44,20 @@ function initHeroAperture() {
   const endHold = () => aperture.setHolding(false);
 
   if (holdBtn) {
-    holdBtn.addEventListener('pointerdown', startHold);
+    holdBtn.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      startHold();
+    });
+    holdBtn.addEventListener('contextmenu', (e) => e.preventDefault());
     holdBtn.addEventListener('keydown', (e) => {
       if (e.key === ' ' || e.key === 'Enter') startHold();
     });
     holdBtn.addEventListener('keyup', endHold);
   }
 
-  // Pressing & holding anywhere on the hero canvas (not on a link) also fractures the monolith
+  // Pressing & holding anywhere on the hero canvas (desktop only, so mobile scroll stays natural)
   hero.addEventListener('pointerdown', (e) => {
-    if (e.target.closest('a')) return;
+    if (e.pointerType === 'touch' || e.target.closest('a') || e.target.closest('button')) return;
     startHold();
   });
   window.addEventListener('pointerup', endHold);
@@ -216,12 +220,13 @@ function initScrollChoreography(aperture) {
         line2.style.transform = `translateY(${((1 - a2) * 28).toFixed(1)}px)`;
       }
 
-      // Diagonal fracture cleave of "OVERTHROW" from p = 0.42 -> 1.0
+      // Diagonal fracture cleave of "OVERTHROW" from p = 0.38 -> 0.90 (viewport-scaled)
       const cleaveP = Math.min(1, Math.max(0, (p - 0.38) / 0.52));
       const easeCleave = 1 - Math.pow(1 - cleaveP, 3);
       if (cleaveTop && cleaveBot) {
-        const shiftX = easeCleave * 24;
-        const shiftY = easeCleave * 6;
+        const isSmall = window.innerWidth < 640;
+        const shiftX = easeCleave * (isSmall ? 9 : 24);
+        const shiftY = easeCleave * (isSmall ? 3.5 : 6);
         cleaveTop.style.transform = `translate(${(-shiftX).toFixed(1)}px, ${(-shiftY).toFixed(1)}px)`;
         cleaveBot.style.transform = `translate(${shiftX.toFixed(1)}px, ${shiftY.toFixed(1)}px)`;
       }

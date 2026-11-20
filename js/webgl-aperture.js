@@ -132,7 +132,8 @@ void main() {
   vec2 m = (uMouse - 0.5) * vec2(aspect, 1.0);
 
   // Subtle vertical fluted architectural glass ribs (echoing IG vertical-slit reels)
-  float ribFreq = mix(42.0, 26.0, clamp(uResolution.x < 700.0 ? 1.0 : 0.0, 0.0, 1.0));
+  float isPortrait = smoothstep(0.95, 0.58, aspect);
+  float ribFreq = mix(42.0, 20.0, isPortrait);
   float ribPhase = uv.x * ribFreq;
   float ribFract = fract(ribPhase) - 0.5;
   // Optical cylindrical lens refraction per rib, stronger near cursor & scroll
@@ -141,8 +142,9 @@ void main() {
   float refractX = ribFract * 0.011 * lensInfluence;
   float ribSpec = pow(max(0.0, 1.0 - abs(ribFract) * 2.1), 5.0);
 
-  // Coordinate for monolith with gentle scale & scroll parallax
-  vec2 mp = (p + vec2(refractX, uScroll * 0.16)) * 1.48;
+  // Coordinate for monolith with portrait-aware scaling so outer bars breathe on phones
+  float monoScale = mix(1.48, 2.08, isPortrait);
+  vec2 mp = (p + vec2(refractX, uScroll * 0.16)) * monoScale;
 
   // Evaluate SDF + subtle optical chromatic glass dispersion strictly at fluted edges
   float fracAmt = clamp(uFracture + uScroll * 0.55, 0.0, 1.0);

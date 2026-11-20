@@ -416,6 +416,10 @@ iframe {
   gap: 0.85rem;
   padding: 0.35rem 0.5rem 0.35rem 0;
   color: var(--ink);
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
   transition: color 0.2s ease;
 }
 
@@ -533,6 +537,7 @@ iframe {
   padding: clamp(5.5rem, 10vw, 9.5rem) 0;
   border-bottom: 1px solid var(--rule);
   background: var(--black);
+  overflow-x: clip;
 }
 
 .act-header {
@@ -1369,7 +1374,7 @@ a.poster-row:hover .muted {
 
 .bp-tab {
   padding: 1rem 0.75rem;
-  color: var(--ink-muted);
+  color: var(--ink-2);
   border-right: 1px solid var(--rule);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -1480,8 +1485,9 @@ a.poster-row:hover .muted {
 
 .barcode-sub {
   margin: 0.8rem 0 0;
-  font-size: clamp(0.55rem, 1vw, 0.7rem);
-  letter-spacing: 0.36em;
+  font-size: clamp(0.56rem, 1.1vw, 0.72rem);
+  letter-spacing: clamp(0.18em, 0.75vw, 0.52em);
+  white-space: nowrap;
   color: var(--ink);
 }
 
@@ -1568,7 +1574,7 @@ a.poster-row:hover .muted {
 }
 
 /* ==========================================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET & MOBILE POLISH
    ========================================================================== */
 @media (max-width: 1100px) {
   .spine-left,
@@ -1595,13 +1601,13 @@ a.poster-row:hover .muted {
   }
 
   .hero-frame {
-    padding: 1.2rem 1.25rem 1.5rem;
+    padding: 1.2rem 1.25rem 1.75rem;
   }
 
   .hero-bottom {
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 1.2rem;
+    gap: 1.15rem;
   }
 
   .gatefold-layout,
@@ -1611,68 +1617,486 @@ a.poster-row:hover .muted {
     gap: 3rem;
   }
 
+  .gatefold-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gatefold-caption {
+    width: 100%;
+    max-width: 460px;
+  }
+
   .origin-sticky {
     position: static;
   }
 
   .jacket-stage:hover .inner-sleeve {
-    transform: translateX(32px);
+    transform: translateX(20px);
   }
 }
 
 @media (max-width: 740px) {
-  .track-specimen {
-    height: 244px;
+  :root {
+    --header-h: 58px;
   }
 
-  .act-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .wrap {
+    width: calc(100% - 2rem);
+  }
+
+  .section {
+    padding: 3.85rem 0;
+  }
+
+  /* Header Mobile */
+  .site-header {
+    padding: 0 1rem;
+  }
+
+  .brand-lockup {
+    gap: 0.55rem;
+  }
+
+  .brand-mark {
+    width: 14px;
+    height: 25px;
+  }
+
+  .brand-name {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+  }
+
+  .header-right {
     gap: 0.75rem;
   }
 
-  .poster-row {
-    grid-template-columns: 1fr;
+  .nav-store {
+    padding: 0.38rem 0.72rem;
+    font-size: 0.62rem;
+  }
+
+  .mobile-sheet {
+    padding: 2rem 1.25rem;
+  }
+
+  .mobile-sheet-nav a {
+    font-size: 1.35rem;
+    padding: 0.9rem 0;
+  }
+
+  /* Hero Mobile */
+  .hero-frame {
+    padding: 0.9rem 1rem 1.5rem;
+  }
+
+  .hero-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-stage {
+    padding: 0.75rem 0;
+  }
+
+  .hero-serif {
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.3em;
+  }
+
+  .wordmark-plate {
+    width: 94%;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-subline {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    gap: 0.4rem 0.55rem;
+    padding: 0.45rem 0.8rem;
+    max-width: 100%;
+  }
+
+  .hero-bottom {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .fracture-hold {
+    padding: 0.25rem 0;
+    gap: 0.65rem;
+    font-size: 0.62rem;
+  }
+
+  .hold-ring {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-ffo {
+    font-size: 0.56rem;
+    line-height: 1.65;
+    max-width: 34ch;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.6rem;
-    padding: 1.4rem 0.5rem;
+  }
+
+  .wipe-btn {
+    padding: 0.82rem 0.65rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  /* Act Headers Mobile */
+  .act-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.35rem;
+  }
+
+  .act-num {
+    font-size: 3.4rem;
+  }
+
+  .monument-title {
+    font-size: clamp(1.7rem, 8.2vw, 2.7rem);
+    line-height: 1.04;
+    overflow-wrap: break-word;
+  }
+
+  /* Release / Gatefold / Track Specimen Mobile */
+  .gatefold-layout {
+    gap: 2.25rem;
+  }
+
+  .jacket-stage {
+    width: min(100%, 330px);
+  }
+
+  .jacket-stage:hover .inner-sleeve {
+    transform: translateX(0);
+  }
+
+  .jacket-footer {
+    left: 1rem;
+    right: 0.9rem;
+    bottom: 0.85rem;
+    font-size: 0.54rem;
+  }
+
+  .gatefold-caption {
+    margin-top: 1.4rem;
+  }
+
+  .gatefold-caption p {
+    font-size: 0.88rem;
+  }
+
+  .inline-links {
+    gap: 1.1rem;
+    font-size: 0.64rem;
+  }
+
+  .track-specimen {
+    padding: 1.25rem;
+    height: auto;
+    min-height: 196px;
+    margin-bottom: 1.15rem;
+  }
+
+  .specimen-top {
+    font-size: 0.6rem;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .specimen-title {
+    font-size: 1.22rem;
+    margin: 0.5rem 0 0.45rem;
+  }
+
+  .specimen-note {
+    font-size: 0.84rem;
+  }
+
+  .spec-row {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    padding: 0.92rem 0.5rem;
+  }
+
+  .spec-name {
+    font-size: 0.84rem;
+  }
+
+  /* Live Dates & Bloodstock Cinema Mobile */
+  .poster-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    padding: 1.35rem 0.4rem;
+  }
+
+  .poster-date {
+    grid-column: 1 / -1;
+  }
+
+  .big-date {
+    font-size: 1.85rem;
+  }
+
+  .poster-info {
+    grid-column: 1 / -1;
+  }
+
+  .poster-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .poster-loc {
+    grid-column: 1;
   }
 
   .poster-cta {
-    text-align: left;
+    grid-column: 2;
+    text-align: right;
+  }
+
+  .cinema-block {
+    margin-top: 2.75rem;
+  }
+
+  .cinema-cover {
+    aspect-ratio: auto;
+    min-height: 320px;
+    padding: 1.35rem 1.1rem;
+    gap: 1.5rem;
+  }
+
+  .cinema-top,
+  .cinema-foot {
+    font-size: 0.58rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .cinema-serif {
+    font-size: 1.65rem;
+    letter-spacing: 0.16em;
+  }
+
+  .cinema-play {
+    padding: 0.85rem 1.2rem;
+    gap: 0.65rem;
+    font-size: 0.62rem;
+  }
+
+  /* Scroll-Pinned Venetian Fracture Chamber Mobile */
+  .fracture-chamber {
+    height: 175vh;
+  }
+
+  .fracture-eyebrow {
+    margin-bottom: 1.25rem;
+    font-size: 0.6rem;
+  }
+
+  .fracture-lines {
+    font-size: clamp(1.65rem, 8.2vw, 2.7rem);
+    letter-spacing: 0.1em;
+    gap: 0.22em;
+  }
+
+  /* Origin & Lineup Mobile */
+  .origin-grid {
+    gap: 2.5rem;
+  }
+
+  .inversion-artifact {
+    margin: 1.35rem 0 1.5rem;
+  }
+
+  .inv-struck {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .inv-prefix,
+  .inv-order {
+    font-size: clamp(2.15rem, 10vw, 3.2rem);
+  }
+
+  .origin-copy {
+    font-size: 0.9rem;
+  }
+
+  .person-row {
+    padding: 1.25rem 0.35rem;
+  }
+
+  .person-row:hover {
+    padding-left: 0.6rem;
   }
 
   .person-main {
-    grid-template-columns: 32px 1fr;
+    grid-template-columns: 28px 1fr;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .person-main h3 {
+    font-size: 1.25rem;
   }
 
   .person-role {
     grid-column: 2;
+    font-size: 0.64rem;
   }
 
   .person-sub {
-    padding-left: 48px;
+    padding-left: 40px;
+    font-size: 0.6rem;
+  }
+
+  .credits-kicker {
+    margin-top: 2.5rem;
+  }
+
+  .credits-mini li {
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    font-size: 0.64rem;
+  }
+
+  /* Merch Studio Mobile */
+  .merch-studio {
+    gap: 1.75rem;
+  }
+
+  .merch-poster {
+    min-height: 360px;
+    padding: 1.35rem;
+  }
+
+  .mp-wordmark {
+    width: 112px;
+  }
+
+  .mp-emblem {
+    height: 92px;
+  }
+
+  .merch-poster-mid {
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  .merch-poster-bot {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.58rem;
   }
 
   .blueprint-tabs {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .bp-tab {
+    padding: 0.85rem 0.25rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+    border-right: 1px solid var(--rule);
+    border-bottom: none;
+  }
+
+  .bp-tab:last-child {
     border-right: none;
-    border-bottom: 1px solid var(--rule);
+  }
+
+  .blueprint-canvas {
+    min-height: 270px;
+    padding: 1rem;
+  }
+
+  .blueprint-foot {
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .blueprint-desc {
+    font-size: 0.84rem;
+  }
+
+  /* Footer Mobile */
+  .site-footer {
+    padding: 4rem 0 2.5rem;
+  }
+
+  .overthrow-block {
+    padding-bottom: 3rem;
+  }
+
+  .overthrow-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.26em;
+  }
+
+  .barcode-svg {
+    height: 50px;
+  }
+
+  .barcode-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.14em;
   }
 
   .subscribe-bar {
     flex-direction: column;
     border-bottom: none;
-    gap: 0.75rem;
+    gap: 0.65rem;
   }
 
   .subscribe-input {
     border-bottom: 1px solid var(--rule-strong);
+    padding: 0.85rem 0.25rem;
   }
 
   .subscribe-btn {
     border: 1px solid var(--rule-strong);
+    width: 100%;
+    padding: 0.9rem;
+  }
+
+  .footer-meta {
+    padding: 2.25rem 0;
+    gap: 1.75rem;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.85rem 1rem;
+    font-size: 0.64rem;
+  }
+
+  .footer-end {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.62rem;
   }
 }
